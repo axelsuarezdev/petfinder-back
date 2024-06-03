@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "dev": "nodemon --watch ./be-src/endpoints.ts --exec ts-node ./be-src/endpoints.ts",
-    "build": "tsc -outDir be-dist"
+    "build": "tsc -outDir be-dist",
+    "start": "node ./be-dist/endpoints.js"
   },
   "keywords": [],
   "author": "",

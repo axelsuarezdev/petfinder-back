@@ -1,6 +1,5 @@
 import * as dotenv from "dotenv";
 dotenv.config();
-console.log("SNIFF: ", process.env.ULTRA_SECRET);
 import * as bodyParser from "body-parser"
 import * as cors from "cors";
 import * as path from "path";
