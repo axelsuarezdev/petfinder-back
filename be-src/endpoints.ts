@@ -25,12 +25,12 @@ sequelize.sync({ force: true});
 
 // app.use(express.json());
 // app.use(bodyParser.json());
-app.use(cors({origin: 'http://127.0.0.1:8080',
+app.use(cors({origin: 'http://127.0.0.1:8080/',
 optionsSuccessStatus: 200,
 }));
 // Add access control allow origin headers
 app.use((req, res, next)=>{
-  res.setHeader("Access-Control-Allow-Origin", "http://127.0.0.1:8080");
+  res.setHeader("Access-Control-Allow-Origin", "http://127.0.0.1:8080/");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Authorization"
@@ -166,6 +166,10 @@ app.delete("/deleteAllReports", async (req,res)=>{
 
 
 /*<---------------------------->*/
+app.get("/check", (req, res)=>{
+  res.send("OK");
+});
+
 app.listen(PORT, () => {
   console.log("API Running at", PORT);
 });
