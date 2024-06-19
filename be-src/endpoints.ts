@@ -38,9 +38,9 @@ app.use((req, res, next)=>{
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   next();
 })
-const staticDirPath = path.resolve(__dirname, "../fe-dist");
+// const staticDirPath = path.resolve(__dirname, "../fe-dist");
 
-app.use(express.static(staticDirPath));
+// app.use(express.static(staticDirPath));
 app.use(bodyParser.json({ limit: "20mb" }));
 app.use(bodyParser.urlencoded({limit: "100mb", extended: true}))
                                                                                               
@@ -176,6 +176,6 @@ app.listen(PORT, () => {
 
 // Combinación de back + front
 // ubicación donde se deployea mi front
-app.get("*", (req, res) => {
-  res.sendFile(staticDirPath + "/index.html");
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(staticDirPath + "/index.html");
+// });
