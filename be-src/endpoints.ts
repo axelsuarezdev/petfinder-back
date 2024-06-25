@@ -25,12 +25,12 @@ sequelize.sync({ force: true});
 
 // app.use(express.json());
 // app.use(bodyParser.json());
-app.use(cors({origin: 'https://petfinder-apx.web.app/',
+app.use(cors({origin: 'https://petfinder-apx.web.app',
 optionsSuccessStatus: 200,
 }));
 // Add access control allow origin headers
 app.use((req, res, next)=>{
-  res.setHeader("Access-Control-Allow-Origin", "https://petfinder-apx.web.app/");
+  res.setHeader("Access-Control-Allow-Origin", "https://petfinder-apx.web.app");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Authorization"
